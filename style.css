@@ -6,7 +6,7 @@ body {
   text-align: center;
   scroll-behavior: auto;
    /* Background image */
-  background-image: url('/Users/rebbecca/Library/CloudStorage/Dropbox-SteveCharlesElec/Rebbecca Charles/Mac (2)/Documents/pexels-edward-jenner-4250572.jpg'); /* or .png */
+  background-image: url('pexels-edward-jenner-4250572.jpg'); /* or .png */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
