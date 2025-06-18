@@ -41,8 +41,9 @@ body {
 }
 .nav {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center; /* Center horizontally */
 }
 .nav a {
   color: white;
@@ -129,7 +130,8 @@ body {
 }
 
 .photo {
-width: 350px;
-height:fit-content;
+  height: 200px;  /* Increase size */
+  max-width: 90%;
+  margin-bottom: 1rem;
 
 }
