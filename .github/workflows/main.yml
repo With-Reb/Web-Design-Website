@@ -1,4 +1,4 @@
-name: Deploy to IONOS via FTP
+name: Deploy to IONOS via SFTP
 
 on:
   push:
@@ -20,5 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: "sftp"
           port: ${{ secrets.FTP_PORT }}
-          local-dir: "/.vscode" # or 'dist' or 'build' folder
+          local-dir: "/build" # or 'dist' or 'build' folder
           server-dir: "/DesignWithReb" # adjust this to your IONOS webspace path
