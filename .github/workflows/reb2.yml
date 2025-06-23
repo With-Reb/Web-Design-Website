@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.IONOS_PASS }}
           port: ${{ secrets.IONOS_PORT }}
           source: "./"
-          target: "/kunden/homepages/23/d4299085887/htdocs//DesignWithReb"
+          target: "/DesignWithReb"
