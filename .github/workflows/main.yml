@@ -21,4 +21,4 @@ jobs:
           protocol: "sftp"
           port: ${{ secrets.FTP_PORT }}
           local-dir: "/build" # or 'dist' or 'build' folder
-          server-dir: "/kunden/homepages/23/d4299085887/htdocs/DesignWithReb" # adjust this to your IONOS webspace path
+          server-dir: "/DesignWithReb" # adjust this to your IONOS webspace path
