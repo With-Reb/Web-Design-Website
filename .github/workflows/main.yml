@@ -1,4 +1,4 @@
-name: Deploy to IONOS
+name: SFTP Deploy to IONOS
 
 on:
   push:
@@ -8,16 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repo
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Upload to IONOS via SCP
-        uses: appleboy/scp-action@v0.1.4
+      - name: SFTP Upload
+        uses: easingthemes/ssh-deploy@v2.1.5
         with:
-          host: ${{ secrets.IONOS_HOST }}
-          username: ${{ secrets.IONOS_USER }}
-          password: ${{ secrets.IONOS_PASS }}
-          port: ${{ secrets.IONOS_PORT }}
-          source: "./"
-          target: "/DesignWithReb"
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote-user: ${{ secrets.USERNAME }}
+          server-ip: ${{ secrets.HOST }}
+          remote-path: ${{ secrets.TARGET }}
+          local-path: "build"  # or "dist" or "build"
+          port: ${{ secrets.PORT }}
