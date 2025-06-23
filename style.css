@@ -16,12 +16,14 @@ html, body {
 
 /* General styles */
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Gotham-Light;
   text-align: center;
-  background: url('pexels-edward-jenner-4250572.jpg') no-repeat center center fixed;
+  background: url('vecteezy_coffee-and-book-minimalist-background-illustration_22336538.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   line-height: 1.6;
+  font-weight: lighter;
+  font-size: larger;
 }
 
 /* Header */
@@ -41,6 +43,7 @@ body {
   width: auto;
   max-width: 90%;
   margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 .nav {
   display: flex;
@@ -65,7 +68,7 @@ body {
   max-width: 700px;
   margin: 5rem auto;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.36);
+  background: rgba(60, 50, 43, 0.704);
   text-align: center;
   border-radius: 10px;
 }
@@ -133,9 +136,11 @@ body {
 }
 
 .photo {
-  height: 200px;  /* Increase size */
+  width: 250px;
+  height: auto;  /* Increase size */
   max-width: 90%;
   margin-bottom: 1rem;
+  border-radius: 1rem;
 
 }
 @media (max-width: 400px) {
