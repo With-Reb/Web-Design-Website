@@ -1,23 +1,24 @@
-name: Deploy to IONOS
+name: Deploy to IONOS via SFTP
 
 on:
   push:
     branches:
-      - main
+      - main  # or your deployment branch
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Upload to IONOS via SCP
-        uses: appleboy/scp-action@v0.1.4
+      - name: Upload via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.IONOS_HOST }}
-          username: ${{ secrets.IONOS_USER }}
-          password: ${{ secrets.IONOS_PASS }}
-          port: ${{ secrets.IONOS_PORT }}
-          source: "./"
-          target: "/DesignWithReb"
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: "sftp"
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: "/build" # or 'dist' or 'build' folder
+          server-dir: "/kunden/homepages/23/d4299085887/htdocs/DesignWithReb" # adjust this to your IONOS webspace path
